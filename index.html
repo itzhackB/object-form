@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    div {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 20px;
+    }
+
+    input[type], select {
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+    button{
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid rgb(24, 3, 3);
+        background-color: rgb(52, 158, 20);
+        border-radius: 4px;
+        color: white;
+        box-sizing: border-box;
+        opacity: 0.6;
+    }
+    button:hover{
+        opacity: 1;
+
+    }
+</style>
+
+<body>
+    <!-- 1.	צרו טופס של משתמש:
+a.	שם פרטי
+b.	אימייל
+c.	גיל
+2.	לחיצה על שלח יוצרת אובייקט עם אותם שדות -->
+    <div>
+        <form id="mainForm" onsubmit="createUser()">
+
+            <label name="firstName">Enter First Name:
+                <input id="firstName" type="text" placeholder="Enter you name..">
+            </label>
+
+            <label name="email">Enter Email:
+                <input id="email" type="email" placeholder="Put here your email..">
+            </label>
+
+            <label name="age">Enter your Age:
+                <input type="number" id="age" placeholder="Age in numbers..">
+            </label>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <script>
+        function createUser() {
+
+            let objectUser =
+            {
+                firstName: firstName.value,
+                email: email.value,
+                age: age.value
+            };
+
+            console.log(objectUser);
+            return false;
+        }
+    </script>
+
+
+</body>
+
+</html>
